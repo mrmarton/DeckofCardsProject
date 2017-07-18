@@ -1,0 +1,57 @@
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: lightgreen;
+  opacity: .5;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 90%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.lb-data {
+  font-family: 'Bellefair', serif;
+  background: grey;
+  border-radius: 5px;
+  padding: 1em;
+  height: 80px;
+  color: black;
+}
+
+.lb-data .lb-details {
+  width: 100%;
+  float: center;
+  text-align: center;
+  line-height: 14px;
+}
+
+.lb-data .lb-caption {
+  font-size: 14px;;
+  font-weight: normal;
+  line-height: 14px;
+}

@@ -1,0 +1,32 @@
+body{
+font-family: 'Bellefair', serif;
+background: grey;
+}
+
+header h1 {
+  color: black;
+  text-align: center;
+  margin-top: 40px;
+}
+
+main {
+  background-color: green;
+  border-radius: 5px;
+}
+
+.lightbox {
+  margin-top: 200px;
+}
+
+.deck {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .lightbox {
+    margin-top: 200px;
+  }
+}

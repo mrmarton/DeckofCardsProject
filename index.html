@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck of Cards</title>
+    <link href="css/fancybox.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Deck of cardsAPI</h1>
+    </header>
+    <main>
+      <div id="cards" class="photos">
+      </div>
+    </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      var cardsAPI = 'https://deckofcardsapi.com/api/deck/new/draw/?count=8';
+      function displayCards(data) {
+        var cardsHTML = '<ul class="deck">';
+        $.each(data.cards, function (i, card) {
+                cardsHTML += '<li class="card">';
+                cardsHTML += '<a href=" ' + card.image + '" rel="lightbox" target="_blank" data-title="Remaning: 51 </br> Suit: ' + card.suit + ' </br> Code: ' + card.code + '</br>Value: ' + card.value + ' </br> Do I need an eye test?"><img src=" ' + card.image + ' " >';
+                cardsHTML += '</a></li>';
+        });
+                  cardsHTML += '</ul>';
+                    $('#cards').html(cardsHTML);
+                  }
+                    $.getJSON(cardsAPI, displayCards);
+        });
+    </script>
+    <script src="lightbox/js/lightbox.js"></script>
+  </body>
+</html>
